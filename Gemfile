@@ -27,6 +27,11 @@ gem 'authlogic'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+   gem 'therubyracer', :platform => :ruby
+
+gem 'rubycas-client'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
