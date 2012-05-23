@@ -1,6 +1,17 @@
 AssociationForum::Application.routes.draw do
   resources :users
-
+  get "example/index"
+  get "example/my_account"
+  
+  root :to => 'example#index'
+  
+   match 'my_account', :controller => "example", :action => "my_account"
+   match 'logout', :controller => "example", :action => "logout"
+   match 'start' , :controller => "example", :action => "start"
+   
+   #map.root :controller => "simple_example"
+    #map.connect ':controller/:action/:id'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
