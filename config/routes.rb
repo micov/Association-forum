@@ -1,12 +1,20 @@
 AssociationForum::Application.routes.draw do
-  get "associations/new"
 
+resources :sessions, only: [ :new, :destroy] 
 root to: 'static_pages#home'
 
-  match '/contact', to: 'static_pages#contact'
-  match '/rules',  to: 'static_pages#rules'
+match '/contact', to: 'static_pages#contact'
+match '/rules',  to: 'static_pages#rules'
  
- get "static_pages/contact"
+get "static_pages/contact"
+get "sessions/my_account"
+get "associations/new"
+ 
+ 
+match '/logout' , to: 'sessions#destroy'
+match '/signin', to: 'sessions#new'
+ 
+ 
  
    #map.root :controller => "simple_example"
     #map.connect ':controller/:action/:id'
