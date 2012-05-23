@@ -35,3 +35,6 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+# Utan denna går det inte att köra programmet..
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+   gem 'therubyracer', :platform => :ruby
