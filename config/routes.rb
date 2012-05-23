@@ -1,4 +1,6 @@
 AssociationForum::Application.routes.draw do
+  get "associations/new"
+
 root to: 'static_pages#home'
 
   match '/contact', to: 'static_pages#contact'
