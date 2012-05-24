@@ -5,7 +5,11 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Advets",  '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
+			<% if current_user.nil? %>
+          		<li><%= link_to "Sign in", signin_path %></li>
+			<% else %>
+				<li><%= link_to 'Log out' , logout_path %></li>
+			<% end %>
           <!--Lägg till adminlänkar och skapa annons, dessa ska inte vara synliga för alla -->
         </ul>
       </nav>
