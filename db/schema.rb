@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523134519) do
+ActiveRecord::Schema.define(:version => 20120524115902) do
 
   create_table "adverts", :force => true do |t|
     t.string   "heading"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(:version => 20120523134519) do
     t.string   "webPage"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "liu_id"
   end
 
 end

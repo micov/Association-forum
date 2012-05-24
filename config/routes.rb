@@ -1,5 +1,7 @@
 AssociationForum::Application.routes.draw do
 
+  get "users/create"
+
 resources :sessions, only: [ :new, :destroy] 
 root to: 'static_pages#home'
 

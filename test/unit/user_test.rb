@@ -5,3 +5,13 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer         not null, primary key
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#  liu_id     :string(255)
+#
+
