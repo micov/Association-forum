@@ -4,7 +4,8 @@
       <%= link_to "Association forum", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Advets",  '#' %></li>
+          <li><%= link_to "Adverts",  '#' %></li>
+          <li><%= link_to "Associations",  associations_path %></li>
 			<% if current_user.nil? %>
           		<li><%= link_to "Sign in", signin_path %></li>
 			<% else %>
