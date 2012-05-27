@@ -1,17 +1,19 @@
 
-<!--
 <% provide(:title, @association.name) %>
 <div class="row">
-  <aside>
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @association.name %>
+      </h1>
+      <p>
+        <%= @association.info %>
+      </p>
+      <p> Web page: <a href=<%= @association.webPage%> >
+      <%= @association.webPage%>
+      </a></p>
+    </section>
   </aside>
   <div class="span8">
-    <% if @association.adverts.any? %>
-      <h3>Adverts (<%= @association.adverts.count %>)</h3>
-      <ol class="adverts">
-        <%= render @adverts %>
-      </ol>
-      <%= will_paginate @adverts %>
-    <% end %>
   </div>
 </div>
--->

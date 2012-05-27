@@ -9,6 +9,7 @@
 #  updated_at     :datetime        not null
 #
 class Advert < ActiveRecord::Base
+  
   attr_accessible :heading, :association_id, :user_id
   belongs_to :association
 
@@ -16,7 +17,7 @@ class Advert < ActiveRecord::Base
   #mer????
 
   #Ordering adverts from newest to oldest
-  default_scope order: 'microposts.created_at DESC'
+  default_scope order: 'associations.created_at DESC'
 end
 
 

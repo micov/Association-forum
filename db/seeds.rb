@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Association.create([{name: "Baljan", info: "Mer kaffe till folket", webPage: "www.baljan.org"}, {name: "Mickis klubb", info: "Woop woop!", webPage: "student.liu.se"}])
+Advert.create([{heading: "Jobbare", association_id: 1}, {heading: "Intern revisor", association_id: 1}])
+

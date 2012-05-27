@@ -1,11 +1,11 @@
-<%= provide(:title, 'Create Association') %>
-<h1>Create new association</h1>
+<% provide(:title, "Edit association") %> 
+<h1>Update association</h1>
 
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@association) do |f| %>
+  <%= form_for(@association) do |f| %>
       <%= render 'shared/error_messages' %>
-     
+
       <%= f.label :name %>
       <%= f.text_field :name %>
 
@@ -15,7 +15,7 @@
       <%= f.label :webPage %>
       <%= f.text_field :webPage %>
 
-      <%= f.submit "Create new association", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

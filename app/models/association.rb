@@ -12,7 +12,7 @@
 
 
 class Association < ActiveRecord::Base
-  attr_accessible :info, :webPage, :name
+  attr_accessible :name, :info, :webPage
   
   #"dependent: :destroy" ensures that all adverts of an association 
   #is removed if the assoc. is removed
