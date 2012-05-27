@@ -1,0 +1,10 @@
+<%= provide(:title, 'All associations') %>
+<h1>All associations</h1>
+
+<ul class="associations">
+  <% @associations.each do |association| %>
+    <li>
+      <%= link_to association.name, association %>
+    </li>
+  <% end %>
+</ul>
