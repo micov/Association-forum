@@ -9,6 +9,8 @@
 #
 
 class User < ActiveRecord::Base   
+  attr_accessible :liu_id
+    
   before_save { |user| user.liu_id = liu_id.downcase }
   
   #relationships

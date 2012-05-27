@@ -12,7 +12,7 @@
 
 
 class Association < ActiveRecord::Base
-  attr_accessible :info, :webPage
+  attr_accessible :info, :webPage, :name
   
   #"dependent: :destroy" ensures that all adverts of an association 
   #is removed if the assoc. is removed
@@ -21,6 +21,6 @@ class Association < ActiveRecord::Base
   
   validates :name,  presence: true, length: { maximum: 50 }
   validates :info,  presence: true, length: { maximum: 300 }
-  validates :web_page,  presence: true, length: { maximum: 70 }
+  validates :webPage,  presence: true, length: { maximum: 70 }
   #mer???????? typ unikt namn.
 end

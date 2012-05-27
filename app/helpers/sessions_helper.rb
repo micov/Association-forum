@@ -9,6 +9,10 @@ def signed_in?
   !current_user.nil?
 end
 
+def reset_user
+  @current_user = nil
+end  
+
 def current_user
   @current_user ||= session[:cas_user]
 end

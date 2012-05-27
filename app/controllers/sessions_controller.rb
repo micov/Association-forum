@@ -8,11 +8,11 @@ before_filter CASClient::Frameworks::Rails::Filter #, :except => [ :unprotected_
   def new
     CASClient::Frameworks::Rails::Filter.login_url(self)
     current_user = session[:cas_user]   
-    redirect_to root_path
+    redirect_to root_path, notice: "Logged in" 
   end
 
   def destroy
-    CASClient::Frameworks::Rails::Filter.logout(self, nil)
-    #redirect_to root_path
+    reset_user
+    CASClient::Frameworks::Rails::Filter::logout(self)
   end
 end
