@@ -2,10 +2,12 @@ class AssociationsController < ApplicationController
 
   def show
     @association = Association.find(params[:id])
+    @adverts = @association.adverts.paginate(page: params[:page])
   end
 
   def index
-    @associations = Association.all
+   # @associations = Association.all
+   @associations = Association.paginate(page: params[:page])
   end
 
 
@@ -36,21 +38,4 @@ class AssociationsController < ApplicationController
       render 'edit'
     end
   end
-
-  def show
-    @association = Association.find(params[:id])
-    @adverts = @association.adverts.all
-  end
-
-#oklart om denna behövs.. ?
-  def create
-    @association = Association.new(params[:association])
-    if @association.save
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @association
-    else
-      render 'new'
-    end
-  end
-
 end

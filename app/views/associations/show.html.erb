@@ -15,5 +15,13 @@
     </section>
   </aside>
   <div class="span8">
+    <% if @association.adverts.any? %>
+      <h3>Adverts (<%= @association.adverts.count %>)</h3>
+      <ol class="adverts">
+        <%= render @adverts %>
+      </ol>
+      <%= will_paginate @adverts 
+      %>
+    <% end %>
   </div>
 </div>

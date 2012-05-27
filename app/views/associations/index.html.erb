@@ -1,6 +1,6 @@
 <%= provide(:title, 'All associations') %>
 <h1>All associations</h1>
-
+<%= will_paginate %>
 <ul class="associations">
   <% @associations.each do |association| %>
     <li>
@@ -8,3 +8,5 @@
     </li>
   <% end %>
 </ul>
+
+<%= will_paginate %>

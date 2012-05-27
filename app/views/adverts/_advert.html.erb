@@ -1,5 +1,5 @@
 <li>
-  <span class="content"><%= advert.heading %></span>
+  <span class="heading"><%= link_to advert.heading, advert %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(advert.created_at) %> ago.
   </span>
