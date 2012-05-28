@@ -7,3 +7,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+      $(function() {
+        $("#alert").click(function() {
+          alert(this.getAttribute("data-message"));
+          return false;
+        })
+      })
+
+$(function(){
+	$("#advert_heading").click(function(){
+		alert("lgkdglkdgdsl");
+		return false;
+
+});

@@ -6,6 +6,42 @@
       <h1>
         <%= @advert.heading %>
       </h1>
+      <p class="italics" >This advert was posted by: <%= link_to @association.name, @association %>
+      </p>
+      <% if !@advert.description.nil? %>
+        <h2>Description</h2>
+        <p><%=@advert.description%></p>
+      <% end%>      
+      
+      <% if !@advert.description.nil? %>
+        <h2>Your profile</h2>
+        <p><%= @advert.profile%></p>
+      <% end%>      
+      <h2>Details</h2>
+      <% if !@advert.description.nil? %>
+        <p class="bold">Location: <%= @advert.location%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">Comprehensiveness: <%= @advert.comprehensiveness%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">Start: <%= @advert.start%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">End: <%= @advert.end%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">Contact: <%= @advert.contact%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
+      <% end%>      
+      <% if !@advert.description.nil? %>
+        <p class="bold">Apply here: <%= @advert.applicationLink%></p>
+      <% end%>      
+
+      <p class="italics"> Created at: <%=@advert.created_at%></p>
+      <p class="italics"> Updated at: <%=@advert.updated_at%></p>
     </section>
   </aside>
 </div>

@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524130759) do
+ActiveRecord::Schema.define(:version => 20120527193643) do
 
   create_table "adverts", :force => true do |t|
     t.string   "heading"
     t.integer  "association_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "description"
+    t.string   "location"
+    t.string   "comprehensiveness"
+    t.string   "contact"
+    t.string   "applicationLink"
+    t.string   "profile"
+    t.string   "start"
+    t.string   "end"
+    t.date     "applicationDeadline"
   end
 
   add_index "adverts", ["association_id", "created_at"], :name => "index_adverts_on_association_id_and_created_at"

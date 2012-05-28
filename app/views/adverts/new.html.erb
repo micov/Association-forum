@@ -1,0 +1,46 @@
+<%= provide(:title, 'Create Advert') %>
+<h1>Create new advert</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@advert) do |f| %>
+      <%= render 'shared/error_messages_advert' %>
+     
+      <%= f.label :heading %>
+      <%= f.text_field :heading %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.label :profile %>
+      <%= f.text_area :profile %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+
+      <%= f.label :comprehensiveness %>
+      <%= f.text_field :comprehensiveness %>
+
+      <%= f.label :start %>
+      <%= f.text_field :start %>
+
+      <%= f.label :end %>
+      <%= f.text_field :end %>
+
+      <%= f.label :contact %>
+      <%= f.text_field :contact %>
+
+      <%= f.label :applicationLink %>
+      <%= f.text_field :applicationLink %>
+
+      <%= f.label :applicationDeadline %>
+      <%= f.text_field :applicationDeadline %>
+
+      <%= f.label :association_id %>
+      <%= f.text_field :association_id %>      
+<!--Måste setta association_id-->
+
+      <%= f.submit "Create new advert", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

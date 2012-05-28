@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>AssociationForum</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", :defaults %>
   <%= csrf_meta_tags %>
+
 </head>
   <body>
     <%= render 'layouts/header' %>
@@ -12,6 +13,8 @@
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
+       <h1><a href="#" id="alert" data-message="Hello UJS!">Click Here</a></h1>
+
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
