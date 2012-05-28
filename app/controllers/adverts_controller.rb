@@ -1,4 +1,6 @@
 class AdvertsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @adverts = Advert.paginate(page: params[:page])
   end
@@ -23,7 +25,7 @@ class AdvertsController < ApplicationController
   end
 
   def edit
-    @advert = Advert.find(params[:id])
+    #@advert = Advert.find(params[:id])
   end
 
   def update
