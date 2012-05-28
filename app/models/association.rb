@@ -20,7 +20,7 @@ class Association < ActiveRecord::Base
   has_and_belongs_to_many :users
   
   validates :name,  presence: true, length: { maximum: 50 }
-  validates :info,  presence: true, length: { maximum: 300 }
+  validates :info,  presence: true, length: { maximum: 255 }
   validates :webPage,  presence: true, length: { maximum: 70 }
   #mer???????? typ unikt namn.
 end

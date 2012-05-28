@@ -1,0 +1,12 @@
+<%= provide(:title, 'All adverts') %>
+<h1>All adverts</h1>
+<%= will_paginate %>
+<ul class="adverts">
+  <% @adverts.each do |advert| %>
+    <li>
+      <%= link_to advert.heading, advert %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

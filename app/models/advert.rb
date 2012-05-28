@@ -9,7 +9,7 @@
 #  updated_at     :datetime        not null
 #
 class Advert < ActiveRecord::Base
-  
+
   attr_accessible :heading, :association_id, :user_id
   belongs_to :association
 
@@ -21,3 +21,13 @@ class Advert < ActiveRecord::Base
 end
 
 
+#Vad mer bör finnas?
+
+# - Rubrik
+# - Beskrivning
+# - Plats
+# - Start/slut
+# - Omfattning
+# - kontakt
+# - söklänk
+# - "Vi söker dig som" - målbild

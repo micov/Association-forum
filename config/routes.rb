@@ -4,6 +4,8 @@ AssociationForum::Application.routes.draw do
 
 resources :sessions, only: [ :new, :destroy] 
 resources :associations
+resources :adverts
+
 root to: 'static_pages#home'
 
 match '/contact', to: 'static_pages#contact'
