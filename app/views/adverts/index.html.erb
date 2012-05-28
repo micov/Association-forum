@@ -5,6 +5,8 @@
   <% @adverts.each do |advert| %>
     <li>
       <%= link_to advert.heading, advert %>
+      <p> Advert posted by: <%= Association.find(advert[:association_id]).name%></p>
+
     </li>
   <% end %>
 </ul>

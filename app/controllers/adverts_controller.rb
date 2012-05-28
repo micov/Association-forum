@@ -22,4 +22,17 @@ class AdvertsController < ApplicationController
     end
   end
 
+  def edit
+    @advert = Advert.find(params[:id])
+  end
+
+  def update
+    @advert = Advert.find(params[:id])
+    if @advert.update_attributes(params[:advert])
+      flash[:success] = "Advert updated!"
+      redirect_to @advert
+    else
+      render 'edit'
+    end
+  end
 end

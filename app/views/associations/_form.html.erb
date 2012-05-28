@@ -1,0 +1,16 @@
+  <div class="span6 offset3">
+    <%= form_for(@association) do |f| %>
+      <%= render 'shared/error_messages' %>
+     
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :info %>
+      <%= f.text_area :info %>
+
+      <%= f.label :webPage %>
+      <%= f.text_field :webPage %>
+
+      <%= f.submit "Create new association", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>

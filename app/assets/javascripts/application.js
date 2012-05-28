@@ -6,19 +6,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
 
 
-      $(function() {
-        $("#alert").click(function() {
-          alert(this.getAttribute("data-message"));
-          return false;
-        })
-      })
-
-$(function(){
-	$("#advert_heading").click(function(){
-		alert("lgkdglkdgdsl");
-		return false;
-
+$(function() {
+  $("#advert_applicationDeadline").datepicker({
+  	dateFormat: 'yy-mm-dd',
+   firstDay: 1
+  });
+  
 });
