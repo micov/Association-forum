@@ -1,14 +1,14 @@
 <%= provide(:title, 'All adverts') %>
 <h1>All adverts</h1>
 <%= will_paginate %>
-<ul class="adverts">
-  <% @adverts.each do |advert| %>
-    <li>
-      <%= link_to advert.heading, advert %>
-      <p> Advert posted by: <%= Association.find(advert[:association_id]).name%></p>
-
-    </li>
+  <table class = "table table-condensed table-striped">
+  	<tr><th>Position</th><th>Posted by</th><th>when</th></tr>
+  	<% @adverts.each do |advert| %>
+    <tr><td><%= link_to advert.heading, advert %></td>
+        <td><%= link_to Association.find(advert[:association_id]).name, Association.find(advert[:association_id])%></td>
+        <td><%= time_ago_in_words(advert.created_at) %> ago.</td>
+    </tr>
   <% end %>
-</ul>
+</table>
 
 <%= will_paginate %>

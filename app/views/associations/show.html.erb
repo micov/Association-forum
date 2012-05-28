@@ -6,6 +6,7 @@
 			<h1>
 				<%= @association.name %>
 			</h1>
+			<h2>Info</h2>
 			<p>
 				<%= @association.info %>
 			</p>
@@ -22,16 +23,22 @@
 					<% end %>
 				</ul>
 			</nav>
+			<div class="admins">
+		           <% #if can? :update, @association #%>
+		              <%= render 'admin' %>
+		           <% #end#%>
+            </div>
 		</section>
 	</aside>
 	<div class="span8">
+		<h2>Adverts (<%= @association.adverts.count %>)</h2>
 		<% if @association.adverts.any? %>
-		<h3>Adverts (<%= @association.adverts.count %>)</h3>
 		<ol class="adverts">
 			<%= render @adverts %>
 		</ol>
-		<%= will_paginate @adverts 
-		%>
+		<%= will_paginate @adverts %>
+		<% else %>
+		<p>No adverts</p> 
 		<% end %>
 	</div>
 </div>

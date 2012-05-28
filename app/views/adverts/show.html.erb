@@ -13,30 +13,30 @@
         <p><%=@advert.description%></p>
       <% end%>      
       
-      <% if !@advert.description.nil? %>
+      <% if !@advert.profile.nil? %>
         <h2>Your profile</h2>
         <p><%= @advert.profile%></p>
       <% end%>      
       <h2>Details</h2>
-      <% if !@advert.description.nil? %>
+      <% if !@advert.location.nil? %>
         <p class="bold">Location: <%= @advert.location%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.comprehensiveness.nil? %>
         <p class="bold">Comprehensiveness: <%= @advert.comprehensiveness%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.start.nil? %>
         <p class="bold">Start: <%= @advert.start%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.end.nil? %>
         <p class="bold">End: <%= @advert.end%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.contact.nil? %>
         <p class="bold">Contact: <%= @advert.contact%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.applicationDeadline.nil? %>
         <p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
       <% end%>      
-      <% if !@advert.description.nil? %>
+      <% if !@advert.applicationLink.nil? %>
         <p class="bold">Apply here: <%= @advert.applicationLink%></p>
       <% end%>      
 

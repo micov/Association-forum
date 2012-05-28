@@ -23,4 +23,20 @@ class Association < ActiveRecord::Base
   validates :info,  presence: true, length: { maximum: 255 }
   validates :webPage,  presence: true, length: { maximum: 70 }
   #mer???????? typ unikt namn.
+
+  #Ordering adverts from newest to oldest
+  default_scope order: 'associations.name'
+
+#  def check_and_add_admin(liuid)
+ #   u = User.find_by_liuid(liuid).nil?
+  #  if !u.nil?
+   #   self.users << u
+      #u = User.create(liuid: liuid)
+  #  end
+
+ # end
+
 end
+
+
+

@@ -33,9 +33,8 @@
       <%= f.text_field :applicationDeadline %>
 
       <%= f.label :association_id %>
-      <%= f.text_field :association_id %>      
-<!--Måste setta association_id-->
+      <%= f.collection_select(:association_id, (User.find_by_liuid(current_user)).associations, :id, :name)%>
 
-      <%= f.submit "Create new advert", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
