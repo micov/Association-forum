@@ -1,19 +1,29 @@
 
 <% provide(:title, @association.name) %>
 <div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= @association.name %>
-      </h1>
-      <p>
-        <%= @association.info %>
-      </p>
-      <p> Web page: <a href=<%= @association.webPage%> >
-      <%= @association.webPage%>
-      </a></p>
-    </section>
-  </aside>
-  <div class="span8">
-  </div>
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= @association.name %>
+			</h1>
+			<p>
+				<%= @association.info %>
+			</p>
+			<p> Web page: <a href=<%= @association.webPage%> >
+				<%= @association.webPage%>
+			</a></p>
+			<nav>
+				<ul>
+					<% if can? :update, @association %>
+					<li><%= link_to "Edit", edit_association_path(@association) %></li>
+					<% end %>
+					<% if can? :destroy, @association %>
+					<li><%= link_to "Destroy", @association, confirm: 'Are you sure?', method: :delete %></li>
+					<% end %>
+				</ul>
+			</nav>
+		</section>
+	</aside>
+	<div class="span8">
+	</div>
 </div>

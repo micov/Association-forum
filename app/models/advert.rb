@@ -17,7 +17,7 @@ class Advert < ActiveRecord::Base
   #mer????
 
   #Ordering adverts from newest to oldest
-  default_scope order: 'associations.created_at DESC'
+  default_scope order: 'adverts.created_at DESC'
 end
 
 
