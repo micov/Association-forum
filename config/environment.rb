@@ -19,4 +19,3 @@ cas_base_url: "https://login.liu.se/cas/",
 :authenticate_on_every_request => true
 #:enable_single_sign_out => true
 )
-
