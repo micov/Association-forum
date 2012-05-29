@@ -6,5 +6,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
 //= require bootstrap
+
+
+
+$(function() {
+  $("#advert_applicationDeadline").datepicker({
+  	dateFormat: 'yy-mm-dd',
+   firstDay: 1
+  });
+  
+});

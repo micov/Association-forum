@@ -13,21 +13,23 @@ class Advert < ActiveRecord::Base
   attr_accessible :heading, :association_id, :user_id
   belongs_to :association
 
+  
   validates :association_id, presence: true
   #mer????
 
   #Ordering adverts from newest to oldest
   default_scope order: 'adverts.created_at DESC'
+
+
 end
 
 
-#Vad mer bör finnas?
-
-# - Rubrik
-# - Beskrivning
-# - Plats
-# - Start/slut
-# - Omfattning
-# - kontakt
-# - söklänk
-# - "Vi söker dig som" - målbild
+# - Rubrik -heading
+# - Beskrivning - description
+# - Plats - location
+# - Start/slut - start/end
+# - Omfattning - comprehensiveness
+# - kontakt - contact
+# - söklänk - applicationLink
+# - "Vi söker dig som" - målbild - profil (glömde e)
+# - ApplicationDeadline 
