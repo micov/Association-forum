@@ -7,8 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Association.create([{name: "Baljan", info: "Mer kaffe till folket", webPage: "www.baljan.org"}, {name: "Mickis klubb", info: "Woop woop!", webPage: "student.liu.se"}])
+ass1 = Association.create(name: "Baljan", info: "Mer kaffe till folket", webPage: "www.baljan.org") 
+
+ass2 = Association.create(name: "Mickis klubb", info: "Woop woop!", webPage: "student.liu.se")
+
 Advert.create([{heading: "Jobbare", association_id: 1}, {heading: "Intern revisor", association_id: 1}])
 
-User.create([{liuid: "klaso084", admin: true} , {liuid: "micov348", admin: false}])
+User.create({liuid: "klaso084", admin: true}) 
+User.create({liuid: "micov348", admin: false})
+
+user1 = User.first
+user2 = User.last
+
+user1.associations << ass1
+user2.associations << ass2
+user2.associations << ass1
 

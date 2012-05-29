@@ -19,11 +19,10 @@ class User < ActiveRecord::Base
   Valid_liu_id_regex =  /[a-z]{5}+[0-9]{3}/
   validates :liuid, presence: true, format: { with: Valid_liu_id_regex }, uniqueness: true  
 
-  #def admin? (user)
-  #u =  User.where(liu_id: user.liu_id)
-  #    admins = User.where(admin: true).all
-  #      admin.liu_id == user.liu_id   
-  #end
-
+  def has_associations?
+   !self.associations.empty?
+  end
+  
+  
 
 end

@@ -1,12 +1,13 @@
 <%= provide(:title, 'All associations') %>
 <h1>All associations</h1>
 <%= will_paginate %>
-<ul class="associations">
-  <% @associations.each do |association| %>
-    <li>
-      <%= link_to association.name, association %>
-    </li>
+  <table class ="table table-condensed table-striped">
+<% @associations.each do |association| %>
+      <tr><td><%= link_to association.name, association %></td>
+	<% if can? :destroy, @association %>
+	<td><%= link_to "Delete", @association, confirm: 'Are you sure?', method: :delete %></td></tr>
+	<% end %>
   <% end %>
-</ul>
+</table>	
 
 <%= will_paginate %>

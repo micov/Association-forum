@@ -5,8 +5,4 @@ module UsersHelper
     #@ass = @current_user.asscociations.all
     #end
   #end
-  def admin?(user)
-    current_user == User.where(liu_id: user) && user.admin
-  end
-  
 end
