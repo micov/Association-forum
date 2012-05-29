@@ -1,5 +1,7 @@
 AssociationForum::Application.routes.draw do
 
+  get "associations_users/new"
+
   get "users/create"
 
 resources :sessions, only: [ :new, :destroy] 
@@ -12,11 +14,7 @@ match '/contact', to: 'static_pages#contact'
 match '/rules',  to: 'static_pages#rules'
 match '/associations',  to: 'associations#index'
 match '/adverts',  to: 'adverts#index'
-
- 
-get "static_pages/contact"
-get "sessions/my_account"
- 
+#match '/adverts/new', to: 'adverts#new' 
  
 match '/logout' , to: 'sessions#destroy'
 match '/signin', to: 'sessions#new'

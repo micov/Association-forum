@@ -24,9 +24,9 @@
 				</ul>
 			</nav>
 			<div class="admins">
-		           <% #if can? :update, @association #%>
+		           <% if can? :update, @association %>
 		              <%= render 'admin' %>
-		           <% #end#%>
+		           <% end %>
             </div>
 		</section>
 	</aside>
@@ -40,5 +40,10 @@
 		<% else %>
 		<p>No adverts</p> 
 		<% end %>
+		<ul>
+			<% if can? :create, Advert %>
+			<li><%= link_to "Create new advert", 'new' %></li>
+			<% end %>
+		</ul>
 	</div>
 </div>

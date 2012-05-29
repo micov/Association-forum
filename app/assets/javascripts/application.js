@@ -11,7 +11,6 @@
 //= require bootstrap
 
 
-
 $(function() {
   $("#advert_applicationDeadline").datepicker({
   	dateFormat: 'yy-mm-dd',

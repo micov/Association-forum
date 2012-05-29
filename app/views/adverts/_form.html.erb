@@ -1,0 +1,18 @@
+  <div class="span6 offset3">
+    <%= simple_form_for @advert  do |f| %>
+    <%= render 'shared/error_messages_advert' %>
+     <%= f.input :heading %>
+     <%= f.input :description %>
+     <%= f.input :profile %>
+     <%= f.input :location %>
+     <%= f.input :comprehensiveness %>
+	 <%= f.input :start %>
+	 <%= f.input :end %>
+	 <%= f.input :contact %>
+	 <%= f.input :applicationLink %>
+	 <%= f.label :applicationDeadline %>
+	<%= f.text_field :applicationDeadline %>
+	 <%= f.association :association, :collection => User.find_by_liuid(current_user).associations, :include_blank => false  %>
+	 <%= f.button :submit, class: "btn btn-large btn-primary"  %>
+    <% end %>
+  </div>

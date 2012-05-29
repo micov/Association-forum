@@ -1,16 +1,10 @@
-<h2>Administators of this association</h2>
-<% @association.users.each do |user| %>
-  <p><%= user.liuid %></p>
-
-  <% if can? :destroy, user %>
-	<li><%= link_to "Destroy", user, confirm: 'Are you sure?', method: :delete %></li>
-  <% end %>
-
-<% end%>
-
-<p>Add another admin:</p>
-
-<!--  <div class="span6 offset3">
+<h2>Administators</h2>
+ <ul><% @association.users.each do |user| %>
+ <li><%= user.liuid %></li>
+<% end %>
+</ul>
+<p> Add another user:</p>
+<!--<div class="span6 offset3">
     <%= #form_for(@association.check_and_add_admin(:liuid)) do |f| 
     %>
 
@@ -25,5 +19,4 @@
       %>
     <% #end 
     %>
--->
-  </div>
+</div>-->

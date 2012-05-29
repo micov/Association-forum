@@ -19,3 +19,6 @@ cas_base_url: "https://login.liu.se/cas/",
 :authenticate_on_every_request => true
 #:enable_single_sign_out => true
 )
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance_tag|
+  html_tag
+end

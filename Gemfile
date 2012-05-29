@@ -6,7 +6,8 @@ gem 'rubycas-client'
 gem 'cancan' , '~> 1.6.7'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-
+gem 'client_side_validations'
+gem 'simple_form'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
