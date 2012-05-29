@@ -37,7 +37,8 @@ class AdvertsController < ApplicationController
       render 'edit'
     end
   end
-   def destroy
+
+  def destroy
       @advert = Advert.find(params[:id])
       @advert.destroy
       flash[:success] = "Advert deleted!"
@@ -46,5 +47,5 @@ class AdvertsController < ApplicationController
         format.html { redirect_to adverts_url }
         format.json { head :ok }
       end
-    end
+  end
 end
