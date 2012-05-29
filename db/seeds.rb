@@ -10,3 +10,5 @@
 Association.create([{name: "Baljan", info: "Mer kaffe till folket", webPage: "www.baljan.org"}, {name: "Mickis klubb", info: "Woop woop!", webPage: "student.liu.se"}])
 Advert.create([{heading: "Jobbare", association_id: 1}, {heading: "Intern revisor", association_id: 1}])
 
+User.create([{liuid: "klaso084", admin: true} , {liuid: "micov348", admin: false}])
+

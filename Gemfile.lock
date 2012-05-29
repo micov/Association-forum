@@ -153,8 +153,8 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
   bootstrap-sass (= 2.0.0)
-  cancan (~> 1.6.7)
   bootstrap-will_paginate (= 0.0.6)
+  cancan (~> 1.6.7)
   capybara
   coffee-rails (~> 3.2.2)
   jquery-rails

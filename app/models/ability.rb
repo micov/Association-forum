@@ -4,9 +4,12 @@ class Ability
   def initialize(user_name)
     # Define abilities for the passed in user here. For example:
     #
-    user = User.new(liu_id: user_name) #|| User.new # guest user (not logged in)
-
-    if user.admin?
+    if user_name == nil
+      user = User.new # guest user (not logged in)
+    else  
+      user = User.find_by_liuid(user_name)  
+    end  
+    if user.admin? 
       can :manage, :all 
     else
       can :read, :all

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527130509) do
+ActiveRecord::Schema.define(:version => 20120529080524) do
 
   create_table "adverts", :force => true do |t|
     t.string   "heading"
@@ -40,10 +40,12 @@ ActiveRecord::Schema.define(:version => 20120527130509) do
   add_index "associations_users", ["user_id", "association_id"], :name => "index_associations_users_on_user_id_and_association_id"
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "liu_id"
-    t.boolean  "admin"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "liuid"
+    t.boolean  "admin",      :default => false
   end
+
+  add_index "users", ["liuid"], :name => "index_users_on_liuid", :unique => true
 
 end

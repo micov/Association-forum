@@ -3,13 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', "2.0.0"
 gem 'rubycas-client'
-<<<<<<< HEAD
 gem 'cancan' , '~> 1.6.7'
-=======
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-
->>>>>>> 12b659c2bfd14c08dfa798ebdc9436f2fb25c336
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

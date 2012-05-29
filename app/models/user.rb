@@ -9,21 +9,21 @@
 #
 
 class User < ActiveRecord::Base   
-  attr_accessible :liu_id , :admin
+  attr_accessible :liuid , :admin
 
-  before_save { |user| user.liu_id = liu_id.downcase }
+  before_save { |user| user.liuid = liuid.downcase }
 
   #relationships
   has_and_belongs_to_many :associations
 
   Valid_liu_id_regex =  /[a-z]{5}+[0-9]{3}/
-  validates :liu_id, presence: true, format: { with: Valid_liu_id_regex }, uniqueness: true  
+  validates :liuid, presence: true, format: { with: Valid_liu_id_regex }, uniqueness: true  
 
-  def admin?
-   User.where(liu_id: self.liu_id).having(admin: true)
-#    admins = User.where(admin: true).all
-#      admin.liu_id == user.liu_id   
-  end
-    
+  #def admin? (user)
+  #u =  User.where(liu_id: user.liu_id)
+  #    admins = User.where(admin: true).all
+  #      admin.liu_id == user.liu_id   
+  #end
+
 
 end
