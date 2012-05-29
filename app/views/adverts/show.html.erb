@@ -8,38 +8,38 @@
 			</h1>
 			<p class="italics" >This advert was posted by: <%= link_to @association.name, @association %>
 			</p>
-			<% if !@advert.description.nil? %>
+			<% if !@advert.description.empty? %>
 			<h2>Description</h2>
 			<p><%=@advert.description%></p>
 			<% end%>      
 
-			<% if !@advert.profile.nil? %>
+			<% if !@advert.profile.blank? %>
 			<h2>Your profile</h2>
 			<p><%= @advert.profile%></p>
 			<% end%>      
 			<h2>Details</h2>
-			<% if !@advert.location.nil? %>
+			<% if !@advert.location.blank? %>
 			<p class="bold">Location: <%= @advert.location%></p>
 			<% end%>      
-			<% if !@advert.comprehensiveness.nil? %>
+			<% if !@advert.comprehensiveness.blank? %>
 			<p class="bold">Comprehensiveness: <%= @advert.comprehensiveness%></p>
 			<% end%>      
-			<% if !@advert.start.nil? %>
+			<% if !@advert.start.blank? %>
 			<p class="bold">Start: <%= @advert.start%></p>
 			<% end%>      
-			<% if !@advert.end.nil? %>
+			<% if !@advert.end.blank? %>
 			<p class="bold">End: <%= @advert.end%></p>
 			<% end%>      
-			<% if !@advert.contact.nil? %>
+			<% if !@advert.contact.blank? %>
 			<p class="bold">Contact: <%= @advert.contact%></p>
 			<% end%>      
-			<% if !@advert.applicationDeadline.nil? %>
+			<% if !@advert.applicationDeadline.blank? %>
 			<p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
 			<% end%>      
-			<% if !@advert.applicationDeadline.nil? %>
+			<% if !@advert.applicationDeadline.blank? %>
 		        <p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
 		      <% end%>      
-		      <% if !@advert.applicationLink.nil? %>
+		      <% if !@advert.applicationLink.blank? %>
 		        <% if !@current_user.nil? %>
 		        <p class="bold">Apply here: <%=link_to @advert.applicationLink%></p>
 		        <% else %>

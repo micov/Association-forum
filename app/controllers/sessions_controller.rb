@@ -1,6 +1,6 @@
 class SessionsController < ActionController::Base
 
-#before_filter CASClient::Frameworks::Rails::GatewayFilter #, :only => :index
+before_filter CASClient::Frameworks::Rails::GatewayFilter #, :only => :index
 before_filter CASClient::Frameworks::Rails::Filter #, :except => [ :unprotected_action, :another_unprotected_action ]
 
   def new

@@ -11,8 +11,13 @@
 	 <%= f.input :contact %>
 	 <%= f.input :applicationLink %>
 	 <%= f.label :applicationDeadline %>
-	<%= f.text_field :applicationDeadline %>
-	 <%= f.association :association, :collection => User.find_by_liuid(current_user).associations, :include_blank => false  %>
+	 <%= f.text_field :applicationDeadline %>
+     <% if can? :manage, :all %>
+       <% assos = Association.all %>
+     <% else %>
+       <% assos = (User.find_by_liuid(current_user)).associations %>
+     <% end %>
+     <%= f.association :association, :collection => assos, :include_blank => false  %>
 	 <%= f.button :submit, class: "btn btn-large btn-primary"  %>
     <% end %>
   </div>
