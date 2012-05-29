@@ -1,14 +1,18 @@
   <div class="span6 offset3">
     <%= form_for(@association) do |f| %>
       <%= render 'shared/error_messages' %>
-     
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      
+      <% if can? :manage, :all %>     
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      <% else %>
+      <h2><%=@association.name%></h2>
+      <% end %>
 
       <%= f.label :info %>
       <%= f.text_area :info %>
 
-      <%= f.label :webPage %>
+      <%= f.label "Web site" %>
       <%= f.text_field :webPage %>
 
       <%= f.submit "Submit", class: "btn btn-large btn-primary" %>

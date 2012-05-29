@@ -9,7 +9,7 @@ end
 #
 #  id         :integer         not null, primary key
 #  name       :string(255)
-#  info       :string(255)
+#  info       :text
 #  webPage    :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null

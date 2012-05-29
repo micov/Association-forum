@@ -2,10 +2,7 @@
 <% @association.users.each do |user| %>
   <p><%= user.liuid %></p>
 
-  <% if can? :destroy, user %>
-	<li><%= link_to "Destroy", user, confirm: 'Are you sure?', method: :delete %></li>
-  <% end %>
-
+ 
 <% end%>
 
 <p>Add another admin:</p>
