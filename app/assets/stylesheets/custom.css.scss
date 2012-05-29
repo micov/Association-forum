@@ -8,6 +8,7 @@ $grayMediumLight: #eaeaea;
 	-moz-box-sizing: border-box; 
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box;
+	
 	/* universal */
 }
 html {
@@ -80,6 +81,7 @@ p {
 }
 
 /* footer */
+
 footer {
 	margin-top: 45px;
 	padding-top: 5px;
@@ -116,7 +118,6 @@ aside {
 	section {
 		padding: 10px 0;
 		border-top: 1px solid $grayLighter;
-		border: 5px solid #ff0;
 		&:first-child {
 			border: 0;
 			padding-top: 0;
@@ -133,6 +134,11 @@ aside {
 			margin-bottom: 3px;
 		}
 	}
+}
+
+.gravatar {
+	float: left;
+	margin-right: 10px;
 }
 
 /* forms */
@@ -157,4 +163,3 @@ input, textarea, select, .uneditable-input {
 	@extend .control-group;
 	@extend .error;
 }
-

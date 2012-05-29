@@ -1,24 +1,10 @@
 <h2>Administators</h2>
+<% if @association.users.any? %>
  <ul><% @association.users.each do |user| %>
  <li><%= user.liuid %></li>
 <% end %>
 </ul>
-<p> Add another user:</p>
+<% else %>
+No administrators
+<% end %>
 
-<!--  <div class="span6 offset3">
->>>>>>> 736e3160ce103089684ea04f169a9f440ef58e26
-    <%= #form_for(@association.check_and_add_admin(:liuid)) do |f| 
-    %>
-
-      <%= #f.label "Liuid" 
-      %>
-      <%= #f.text_field :liuid 
-      %>
-     
-
-
-      <%= # f.submit "Add new admin", class: "btn btn-large btn-primary" 
-      %>
-    <% #end 
-    %>
-</div>-->

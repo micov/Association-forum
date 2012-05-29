@@ -7,9 +7,11 @@ gem 'cancan' , '~> 1.6.7'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'client_side_validations'
-gem 'simple_form'
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+#gem 'client_side_validations'
+gem 'simple_form', "~> 1.5.0"
+gem 'therubyracer', :platform => :ruby
+gem 'jquery-rails'
+
 
 group :development, :test do
   gem 'sqlite3'
@@ -29,15 +31,9 @@ group :assets do
   gem 'uglifier', "1.2.3"
 end
 
-gem 'jquery-rails'
 
 group :test do
   gem 'capybara'
-end
-
-
-group :production do
-  gem 'pg', '0.12.2'
 end
 
 # Use unicorn as the web server
@@ -51,4 +47,4 @@ end
 
 # Utan denna går det inte att köra programmet..
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-   gem 'therubyracer', :platform => :ruby
+  

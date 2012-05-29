@@ -1,16 +1,16 @@
-  <div class="span6 offset3">
-    <%= simple_form_for(@association) do |f| %>
-      <%= render 'shared/error_messages' %>
-     
-      
-      <% if can? :manage, :all %>     
-       <%= f.input :name %>
-      <% else %>
-      <h2><%=@association.name%></h2>
-      <% end %>
-      <%= f.input :info, :as => :text %>
-      <%= f.input :webPage %>
+<div class="span6 offset3">
+	<%= simple_form_for @association, :validate => true do |f| %>
+	<%= render 'shared/error_messages' %>
 
-      <%= f.button :submit, class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
+
+	<% if can? :manage, :all %>     
+	<%= f.input :name %>
+	<% else %>
+	<h2><%=@association.name%></h2>
+	<% end %>
+	<%= f.input :info, :as => :text %>
+	<%= f.input :webPage %>
+
+	<%= f.button :submit, class: "btn btn-large btn-primary" %>
+	<% end %>
+</div>

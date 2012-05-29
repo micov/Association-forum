@@ -1,5 +1,5 @@
   <div class="span6 offset3">
-    <%= simple_form_for @advert  do |f| %>
+    <%= simple_form_for @advert, :validate => true do |f| %>
     <%= render 'shared/error_messages_advert' %>
      <%= f.input :heading %>
      <%= f.input :description %>

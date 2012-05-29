@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20120529080525) do
     t.integer  "association_id"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.integer  "user_id"
     t.text     "description"
     t.string   "location"
     t.string   "comprehensiveness"
@@ -33,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20120529080525) do
 
   create_table "associations", :force => true do |t|
     t.string   "name"
-    t.text     "info"
+    t.string   "info"
     t.string   "webPage"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

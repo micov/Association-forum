@@ -9,7 +9,7 @@
 //= require jquery-ui
 //= require_tree .
 //= require bootstrap
-
+//= require rails.validations
 
 $(function() {
   $("#advert_applicationDeadline").datepicker({
