@@ -36,9 +36,16 @@
 			<% if !@advert.applicationDeadline.nil? %>
 			<p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
 			<% end%>      
-			<% if !@advert.applicationLink.nil? %>
-			<p class="bold">Apply here: <%= @advert.applicationLink%></p>
-			<% end%>      
+			<% if !@advert.applicationDeadline.nil? %>
+		        <p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
+		      <% end%>      
+		      <% if !@advert.applicationLink.nil? %>
+		        <% if !@current_user.nil? %>
+		        <p class="bold">Apply here: <%=link_to @advert.applicationLink%></p>
+		        <% else %>
+		        <h3>Sign in to view application link</h3>
+		        <% end %>
+		      <% end%>    
 
 			<p class="italics"> Created at: <%=@advert.created_at%></p>
 			<p class="italics"> Updated at: <%=@advert.updated_at%></p>

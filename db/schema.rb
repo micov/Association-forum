@@ -11,15 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120529080524) do
+ActiveRecord::Schema.define(:version => 20120529080525) do
 
   create_table "adverts", :force => true do |t|
     t.string   "heading"
     t.integer  "association_id"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
-    t.integer  "user_id"
-    t.string   "description"
+    t.text     "description"
     t.string   "location"
     t.string   "comprehensiveness"
     t.string   "contact"
@@ -34,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20120529080524) do
 
   create_table "associations", :force => true do |t|
     t.string   "name"
-    t.string   "info"
+    t.text     "info"
     t.string   "webPage"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

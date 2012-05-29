@@ -4,7 +4,7 @@
 #
 #  id         :integer         not null, primary key
 #  name       :string(255)
-#  info       :string(255)
+#  info       :text
 #  webPage    :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
@@ -19,22 +19,13 @@ class Association < ActiveRecord::Base
   has_many :adverts, dependent: :destroy
   has_and_belongs_to_many :users
   
-  validates :name,  presence: true, length: { maximum: 50 }
-  validates :info,  presence: true, length: { maximum: 255 }
-  validates :webPage,  presence: true, length: { maximum: 70 }
-  #mer???????? typ unikt namn.
-
-  #Ordering adverts from newest to oldest
+  validates :name,  presence: true, length: { maximum: 50 },
+             uniqueness: { case_sensitive: false }
+  validates :info,  presence: true, length: { maximum: 500 }
+  validates :webPage,  presence: true, length: { maximum: 100 }
+  
+  #Ordering adverts alpabetically
   default_scope order: 'associations.name'
-
-#  def check_and_add_admin(liuid)
- #   u = User.find_by_liuid(liuid).nil?
-  #  if !u.nil?
-   #   self.users << u
-      #u = User.create(liuid: liuid)
-  #  end
-
- # end
 
 end
 

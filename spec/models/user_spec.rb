@@ -10,6 +10,7 @@ end
 #  id         :integer         not null, primary key
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
-#  liu_id     :string(255)
+#  liuid      :string(255)
+#  admin      :boolean         default(FALSE)
 #
 

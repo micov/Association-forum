@@ -2,11 +2,13 @@
     <%= simple_form_for(@association) do |f| %>
       <%= render 'shared/error_messages' %>
      
-      <%= f.input :name %>
-
+      
+      <% if can? :manage, :all %>     
+       <%= f.input :name %>
+      <% else %>
+      <h2><%=@association.name%></h2>
+      <% end %>
       <%= f.input :info, :as => :text %>
-
-
       <%= f.input :webPage %>
 
       <%= f.button :submit, class: "btn btn-large btn-primary" %>

@@ -33,7 +33,14 @@
       <%= f.text_field :applicationDeadline %>
 
       <%= f.label :association_id %>
-      <%= f.collection_select(:association_id, (User.find_by_liuid(current_user)).associations, :id, :name)%>
+      <% if can? :manage, :all %>
+        <% assos = Association.all %>
+      <% else %>
+        <% assos = (User.find_by_liuid(current_user)).associations %>
+      <% end %>
+
+
+      <%= f.collection_select(:association_id, assos, :id, :name)%>
 
       <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
     <% end %>

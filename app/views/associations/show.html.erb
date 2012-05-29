@@ -24,10 +24,11 @@
 				</ul>
 			</nav>
 			<div class="admins">
-		           <% if can? :update, @association %>
-		              <%= render 'admin' %>
-		           <% end %>
-            </div>
+				<% if can? :update, @association %>
+				<%= render 'admin' %>
+
+				<% end%>
+			</div>
 		</section>
 	</aside>
 	<div class="span8">

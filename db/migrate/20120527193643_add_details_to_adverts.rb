@@ -1,6 +1,6 @@
 class AddDetailsToAdverts < ActiveRecord::Migration
   def change
-    add_column :adverts, :description, :string
+    add_column :adverts, :description, :text
     add_column :adverts, :location, :string
     add_column :adverts, :comprehensiveness, :string
     add_column :adverts, :contact, :string
