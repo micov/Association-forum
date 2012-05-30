@@ -8,7 +8,7 @@
         <td><%= link_to Association.find(advert[:association_id]).name, Association.find(advert[:association_id])%></td>
         <td><%= time_ago_in_words(advert.created_at) %> ago.</td>
 		<% if can? :destroy, @advert %>
-		<td><%= link_to "Delete", @advert, confirm: 'Are you sure?', method: :delete %></td></tr>
+		<td><%= link_to "Delete", advert, confirm: 'Are you sure?', method: :delete %></td></tr>
 		<% end %>
     </tr>
   <% end %>

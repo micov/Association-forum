@@ -44,6 +44,7 @@ class AssociationsController < ApplicationController
     def destroy
       @association = Association.find(params[:id])
       @association.destroy
+      flash[:success] = "Association deleted!"
 
       respond_to do |format|
         format.html { redirect_to associations_url }

@@ -5,7 +5,7 @@
 <% @associations.each do |association| %>
       <tr><td><%= link_to association.name, association %></td>
 	<% if can? :destroy, @association %>
-	<td><%= link_to "Delete", @association, confirm: 'Are you sure?', method: :delete %></td></tr>
+	<td><%= link_to "Delete", association, confirm: 'Are you sure?', method: :delete %></td></tr>
 	<% end %>
   <% end %>
 </table>
