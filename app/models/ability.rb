@@ -5,11 +5,8 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
 
-    if user_name == nil
-      user = User.new # guest user (not logged in)
-    else  
-      user = User.find_by_liuid(user_name)  
-    end  
+    # if the user exists, load it otherwise create a temporary
+    user = User.find_by_liuid(user_name) || User.new 
 
     #an admin can access all classes and methods 
     if user.admin? 
@@ -32,7 +29,7 @@ class Ability
       #the user can update adverts for associated associtions
       user.associations.each do |ass| 
         can [:update, :destroy], Advert do |ad| 
-          ass == ad.association
+          ass == Association.find(ad[:association_id])
         end
       end   
     else

@@ -43,7 +43,7 @@
 		<% end %>
 		<ul>
 			<% if can? :create, Advert %>
-			<li><%= link_to "Create new advert", 'new' %></li>
+			<li><%= link_to "Create new advert", new_advert_path %></li>
 			<% end %>
 		</ul>
 	</div>

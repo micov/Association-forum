@@ -12,11 +12,15 @@
 							<%= @current_user  %> <b class="caret"></b>
 						</a>
 						<ul class = "dropdown-menu">
-							<% (User.find_by_liuid(@current_user)).associations.each do |association| %>
-							<li>
-								<%= link_to association.name, association %>
-							</li>
+							<% if !User.find_by_liuid(@current_user).nil?%>
+							  <% User.find_by_liuid(@current_user).associations.each do |association| %>
+
+							  <li>
+							  	<%= link_to association.name, association %>
+							  </li>
+							  <% end%>
 							<% end%>
+					   
 							<li class = "divider"></li>
 							<li>
 								<%= link_to 'Sign out', logout_path %>
