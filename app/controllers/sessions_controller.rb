@@ -1,12 +1,13 @@
 class SessionsController < ActionController::Base
 
-before_filter CASClient::Frameworks::Rails::GatewayFilter #, :only => :index
-before_filter CASClient::Frameworks::Rails::Filter #, :except => [ :unprotected_action, :another_unprotected_action ]
+  #Before a new session is started the CAS configurations is loaded
+  before_filter CASClient::Frameworks::Rails::GatewayFilter 
+  before_filter CASClient::Frameworks::Rails::Filter 
 
   def new
     CASClient::Frameworks::Rails::Filter.login_url(self)
-    user = session[:cas_user]
-    #user = User.where(liu_id: user_name) || User.create(liu_id: user_name)           
+    user = session[:cas_user]        
+    #Helper method for signing in
     sign_in user  
     redirect_to root_path, notice: "Logged in" 
   end

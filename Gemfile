@@ -7,7 +7,6 @@ gem 'cancan' , '~> 1.6.7'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'client_side_validations'
-#gem 'client_side_validations'
 gem 'simple_form', "~> 1.5.0"
 gem 'therubyracer', :platform => :ruby
 gem 'jquery-rails'
@@ -45,6 +44,5 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-# Utan denna går det inte att köra programmet..
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   

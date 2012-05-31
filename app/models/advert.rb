@@ -7,6 +7,7 @@
 #  association_id      :integer
 #  created_at          :datetime        not null
 #  updated_at          :datetime        not null
+#  user_id             :integer
 #  description         :text
 #  location            :string(255)
 #  comprehensiveness   :string(255)
@@ -17,14 +18,15 @@
 #  end                 :string(255)
 #  applicationDeadline :date
 #
+
 class Advert < ActiveRecord::Base
 
   attr_accessible :heading, :association_id, :description, 
-                  :location, :comprehensiveness, :contact, :applicationLink,
-                  :profile, :start, :end, :applicationDeadline
+  :location, :comprehensiveness, :contact, :applicationLink,
+  :profile, :start, :end, :applicationDeadline
   belongs_to :association
 
-  
+  #Validations for the different attributes
   validates :association_id, presence: true
   validates :heading,  presence: true, length: { maximum: 50 }
   validates :description,  presence: true, length: { maximum: 500 }
@@ -35,7 +37,7 @@ class Advert < ActiveRecord::Base
   validates :profile, length: { maximum: 255 }
   validates :start, length: { maximum: 100 }
   validates :end, length: { maximum: 100 }
-  
+
   #Ordering adverts from newest to oldest
   default_scope order: 'adverts.created_at DESC'
 

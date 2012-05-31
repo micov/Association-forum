@@ -13,7 +13,7 @@ end
 #  created_at          :datetime        not null
 #  updated_at          :datetime        not null
 #  user_id             :integer
-#  description         :string(255)
+#  description         :text
 #  location            :string(255)
 #  comprehensiveness   :string(255)
 #  contact             :string(255)

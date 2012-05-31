@@ -71,10 +71,3 @@ user2 = User.last
 user1.associations << ass1
 user2.associations << ass2
 user2.associations << ass1
-
-
-user=User.find(2)
-ass=Association.find(1)
-user.associations << ass
-ass=Association.find(2)
-user.associations << ass

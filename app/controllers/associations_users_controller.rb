@@ -1,5 +1,4 @@
 class AssociationsUsersController < ApplicationController
-  def new
-    
+  def new  
   end
 end

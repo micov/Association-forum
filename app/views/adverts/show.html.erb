@@ -19,29 +19,26 @@
 			<% end%>      
 			<h2>Details</h2>
 			<% if !@advert.location.blank? %>
-			<p class="bold">Location: <%= @advert.location%></p>
+			<p><span class="bold">Location: </span><span> <%= @advert.location%></span></p>
 			<% end%>      
 			<% if !@advert.comprehensiveness.blank? %>
-			<p class="bold">Comprehensiveness: <%= @advert.comprehensiveness%></p>
+			<p><span class="bold">Comprehensiveness: </span><span><%= @advert.comprehensiveness%></span></p>
 			<% end%>      
 			<% if !@advert.start.blank? %>
-			<p class="bold">Start: <%= @advert.start%></p>
+			<p><span class="bold">Start:</span> <span> <%= @advert.start%></span></p>
 			<% end%>      
 			<% if !@advert.end.blank? %>
-			<p class="bold">End: <%= @advert.end%></p>
+			<p><span class="bold">End:</span> <span> <%= @advert.end%></span></p>
 			<% end%>      
 			<% if !@advert.contact.blank? %>
-			<p class="bold">Contact: <%= @advert.contact%></p>
-			<% end%>      
+			<p><span class="bold">Contact:</span> <span> <%= @advert.contact%></span></p>
+			<% end%>         
 			<% if !@advert.applicationDeadline.blank? %>
-			<p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
-			<% end%>      
-			<% if !@advert.applicationDeadline.blank? %>
-		        <p class="bold">Apply before: <%= @advert.applicationDeadline%></p>
+		    <p><span class="bold">Apply before:</span> <span> <%= @advert.applicationDeadline%></span></p>
 		      <% end%>      
 		      <% if !@advert.applicationLink.blank? %>
 		        <% if !@current_user.nil? %>
-		        <p class="bold">Apply here: <%=link_to @advert.applicationLink%></p>
+		        <p><span class="bold">Apply here:</span> <span> <%=link_to @advert.applicationLink%></span></p>
 		        <% else %>
 		        <h3>Sign in to view application link</h3>
 		        <% end %>
